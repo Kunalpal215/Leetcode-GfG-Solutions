@@ -18,16 +18,16 @@ class Solution{
             return;
         }
         arr[r][c]=0;
-        if(r-1>=0 && arr[r-1][c]==1){
+        if(r-1>=0){
             solve(ans,arr,r-1,c,path+"U");
         }
-        if(r+1<n && arr[r+1][c]==1){
+        if(r+1<n){
             solve(ans,arr,r+1,c,path+"D");
         }
-        if(c-1>=0 && arr[r][c-1]==1){
+        if(c-1>=0){
             solve(ans,arr,r,c-1,path+"L");
         }
-        if(c+1<n && arr[r][c+1]==1){
+        if(c+1<n){
             solve(ans,arr,r,c+1,path+"R");
         }
         arr[r][c]=1;
